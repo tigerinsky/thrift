@@ -12,6 +12,8 @@ then
     exit 1
 fi
 
+export LDFLAGS="${LDFLAGS} -lrt"
+
 cd $tmp_dir
 ./bootstrap.sh \
     && ./configure --enable-tests=no --enable-tutorial=no --with-php=no --with-python=no --with-lua=no --prefix=${base_dir} --enable-shared=no \
