@@ -16,7 +16,7 @@ export LDFLAGS="${LDFLAGS} -lrt"
 
 cd $tmp_dir
 ./bootstrap.sh \
-    && ./configure --enable-tests=no --enable-tutorial=no --with-php=no --with-python=no --with-lua=no --prefix=${base_dir} --enable-shared=no \
+    && ./configure --enable-tests=no --enable-tutorial=no --with-php=no --with-python=no --with-lua=no --with-libevent --prefix=${base_dir} --enable-shared=no \
         && make && make install
 if [ $? -ne 0 ]
 then
